@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Welcome</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+      <ion-list>
+          <ion-item> 
+              <ion-label> Name </ion-label>
+              <ion-label> Username </ion-label>
+          </ion-item>
+          <ion-item *ngFor="let list of wsResponse" (click)="profileNav(list.id)">
+            <ion-label> {{list.name}}</ion-label>
+            <ion-label> {{list.username}}</ion-label>
+          </ion-item>
+          
+        </ion-list>
+  
+  </ion-content>
+  
